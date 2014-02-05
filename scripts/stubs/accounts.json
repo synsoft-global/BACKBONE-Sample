@@ -1,0 +1,32 @@
+{
+	   "headline"	:	"show updates from", 
+	"item"   :
+	[
+		{
+			"label"	: "all accounts",
+			"href"	: "test1",
+			"className"	: "selected"
+		},
+		{
+			"label"	: "Windows Live",
+			"href"	: "test2",
+			"className"	: ""
+		},
+		{
+			"label"	: "Facebook",
+			"href"	: "test3",
+			"className"	: "facebook"
+		},
+		{
+			"label"	: "Twitter",
+			"href"	: "test4",
+			"className"	: "test1"
+		},
+		{
+			"label"	: "LinkedIn",
+			"href"	: "test5",
+			"className"	: "test1"
+		}
+	]
+}
+ 

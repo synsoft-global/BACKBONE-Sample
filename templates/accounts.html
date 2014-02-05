@@ -1,0 +1,12 @@
+ <!--here we add template according account.json -->
+ <div id="accounts">
+    <h5><%= headline  %></h5>
+	<ul data-role="listview" data-inset="true", data-filter="true">
+         <% _.each(item, function(items) { %>
+            <li class="<%= items.className  %>"><%= items.label %> </li>
+         <% }); %>
+   </ul>
+ </div>
+ 	
+ 
+ 

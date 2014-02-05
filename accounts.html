@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<script src="scripts/libs/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="scripts/libs/scout.js" type="text/javascript"></script>
+    <script src="scripts/libs/underscore.js" type="text/javascript"></script>
+    <script src="scripts/libs/backbone.js" type="text/javascript"></script>        
+	<script src="scripts/js.source/wpviews.js" type="text/javascript"></script>
+    <script src="scripts/js.source/wpsdk.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="mainContainer"></div>
+	<script type="text/javascript">
+		var params = {			
+			"templates": [/*A subset of pageNames*/], //["accounts"],
+			"screenWidth": "320",
+			"screenHeight": "480",
+			"debug": true,
+			"error": function () { },
+			"complete": function () {
+				onloadcompleted();
+			}
+        };
+        // here params we passess here parameter to init method of WPSDK js
+        WPSDK.init(params);
+        // After WPSDK.init loading complted onloadcompleted event call
+		function onloadcompleted() {			
+			WPViews.template = WPSDK.pages["accounts"];
+			WPViews.json = WPSDK.json;
+			WPViews.init();
+		}
+	</script>
+</body>
+</html>

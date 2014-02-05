@@ -1,0 +1,17 @@
+ <!--here we add template according appointment.json -->
+ <div id="appointment">
+<h5 id="dialogTitle"><%= headline %></h5>
+
+<div id="appWrapper">
+<div id="appScroller">
+          <ul data-role="listview" data-inset="true", data-filter="true">
+          <% _.each(items, function(item) { %>
+          
+<div class="fakefield"><%= item.label %></div>
+        
+<div class="fakefield"><%= item.data %></div>
+       <% }); %>
+        </ul>
+</div>
+</div>
+</div>
